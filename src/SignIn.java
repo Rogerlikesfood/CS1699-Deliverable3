@@ -1,3 +1,3 @@
-public class Feature1 extends BrowserHandler {
+public class SignIn extends BrowserHandler {
 
 }
