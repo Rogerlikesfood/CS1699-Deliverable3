@@ -5,16 +5,33 @@ import org.junit.BeforeClass;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class InitialSetup {
+	// The amount of time allowed for the WebDriver to poll the DOM when trying to find an element
+	// or elements if they are not immediately available (in seconds).
 	private static final int IMPLICIT_WAIT_TIMEOUT = 30;
 	
 	public static FirefoxDriver firefoxDriver;
 	
+	/*
+	 * Annotating a public static void no-arg method with @BeforeClass causes it to be run once
+	 * before any of the test methods in the class. The @BeforeClass methods of superclasses will
+	 * be run before those of the current class.
+	 * 
+	 * Opens the Firefox browser and sets the implicit wait timeout to 30 seconds.
+	 */
 	@BeforeClass
-	public static void openBrowser() {
+	public static void openBrowserAndSetImplicitWaitTimeout() {
 		firefoxDriver = new FirefoxDriver();
 		firefoxDriver.manage().timeouts().implicitlyWait(IMPLICIT_WAIT_TIMEOUT, TimeUnit.SECONDS);
 	}
 	
+	/*
+	 * Annotating a public static void method with @AfterClass causes that method to be run after
+	 * all the tests in the class have been run. All @AfterClass methods are guaranteed to run even
+	 * if a BeforeClass method throws an exception. The @AfterClass methods declared in
+	 * superclasses will be run after those of the current class.
+	 * 
+	 * Closes the previously opened Firefox browser.
+	 */
 	@AfterClass
 	public static void closeBrowser() {
 		firefoxDriver.quit();
