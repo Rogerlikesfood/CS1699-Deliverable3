@@ -8,14 +8,14 @@ public class BrowserHandler {
 	private static FirefoxDriver firefoxDriver;
 	
 	@BeforeClass
-	public static void setUp() {
+	public static void openBrowser() {
 		firefoxDriver = new FirefoxDriver();
 		firefoxDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		firefoxDriver.get("https://github.com/");
 	}
 	
 	@AfterClass
-	public static void tearDown() {
+	public static void closeBrowser() {
 		firefoxDriver.quit();
 	}
 }
