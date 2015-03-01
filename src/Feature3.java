@@ -1,3 +1,3 @@
-public class Feature3 extends BrowserHandler {
+public class Feature3 extends InitialSetup {
 
 }
