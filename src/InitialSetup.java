@@ -27,7 +27,7 @@ public class InitialSetup {
 	/*
 	 * Annotating a public static void method with @AfterClass causes that method to be run after
 	 * all the tests in the class have been run. All @AfterClass methods are guaranteed to run even
-	 * if a BeforeClass method throws an exception. The @AfterClass methods declared in
+	 * if a @BeforeClass method throws an exception. The @AfterClass methods declared in
 	 * superclasses will be run after those of the current class.
 	 * 
 	 * Closes the previously opened Firefox browser.
