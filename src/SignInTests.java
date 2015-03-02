@@ -9,8 +9,8 @@ import org.openqa.selenium.WebElement;
 
 /*
  * Feature: As a GitHub user
- * 			I want to be able to sign in to my GitHub account
- * 			So that I can manage my GitHub account
+ *          I want to be able to sign in to my GitHub account
+ *          So that I can manage my GitHub account
  */
 public class SignInTests extends InitialSetup {
 	private static final String USERNAME = "Deliverable3";

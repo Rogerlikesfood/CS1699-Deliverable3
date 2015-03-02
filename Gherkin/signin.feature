@@ -1,6 +1,6 @@
 Feature: As a GitHub user 
-		 I want to be able to sign in to my GitHub account 
-		 So that I can manage my GitHub account
+         I want to be able to sign in to my GitHub account 
+         So that I can manage my GitHub account
 	Scenario: I sign in but I do not have a GitHub account
 		Given no username
 		And no password
