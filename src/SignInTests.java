@@ -40,9 +40,7 @@ public class SignInTests extends InitialSetup {
 	
 	/*
 	 * Scenario: I sign in but I do not have a GitHub account
-	 *     Given no username 
-	 *     And no password
-	 *     When I try to sign in with no credentials
+	 *     When I try to sign in without a username and without a password
 	 *     Then I should receive a message stating that an "Incorrect username or password" has been entered
 	 *     
 	 * Tests to see if GitHub allows a user to sign in if they do not have a GitHub account.

@@ -2,9 +2,7 @@ Feature: As a GitHub user
          I want to be able to sign in to my GitHub account 
          So that I can manage my GitHub account
 	Scenario: I sign in but I do not have a GitHub account
-		Given no username
-		And no password
-		When I try to sign in with no credentials
+		When I try to sign in without a username and without a password
 		Then I should receive a message stating that an "Incorrect username or password" has been entered
 	Scenario: I sign in with an incorrect username and an incorrect password
 		Given an incorrect username
